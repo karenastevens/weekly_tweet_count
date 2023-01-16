@@ -1,10 +1,13 @@
+from dotenv import load_dotenv
 import mysql.connector
 import requests
 import os
 import json
 import time
 
-# Set env variables in terminal
+load_dotenv()
+
+# Set env variables
 
 my_conn=mysql.connector.connect(
     user = os.environ.get("DB_USER"),

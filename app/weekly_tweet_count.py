@@ -60,11 +60,14 @@ def weekly_update():
     start = 0
     end = 300
 
+    #Update symbols 300 at a time
+
     for i in range(round(len(ticker_list) / 300)):
         updatecount(start, end)
         start += 300
         end += 300
         print("15 minute break")
         time.sleep(900) #15 minute break based on Twitter API limit of 300 requests per 15 minutes
+
 
 weekly_update()

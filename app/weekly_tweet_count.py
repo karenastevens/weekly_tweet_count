@@ -1,4 +1,5 @@
 from dotenv import load_dotenv
+from datetime import datetime
 import mysql.connector
 import requests
 import os
@@ -69,7 +70,12 @@ def weekly_update():
         updatecount(start, end)
         start += 300
         end += 300
-        print("15 minute break")
+
+        #Get current time
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+
+        print("15 minute break starting: " + current_time)
         time.sleep(900) #15 minute break based on Twitter API limit of 300 requests per 15 minutes
 
 

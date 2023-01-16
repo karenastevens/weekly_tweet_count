@@ -1,26 +1,32 @@
-from dotenv import load_dotenv
-from datetime import datetime
-
 import mysql.connector
 import requests
 import os
 import json
 import time
+import logging
+from datetime import datetime
+from dotenv import load_dotenv
 
+logging.basicConfig(level=logging.INFO)
+
+# Load env variables
 load_dotenv()
 
-# Set env variables
+# Connect to database
+try:
+    my_conn = mysql.connector.connect(
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASS"),
+        db=os.getenv("DB_NAME"),
+        host=os.getenv("DB_HOST"),
+    )
+except mysql.connector.Error as err:
+    logging.error(f"Failed to connect to the database: {err}")
+    exit(1)
 
-my_conn=mysql.connector.connect(
-    user = os.environ.get("DB_USER"),
-    password = os.environ.get("DB_PASS"),
-    db = os.environ.get("DB_NAME"),
-    host = os.environ.get("DB_HOST"),
-)
-# To set your environment variables in your terminal run the following line:
-# export 'BEARER_TOKEN'='<your_bearer_token>'
 
-bearer_token = os.environ.get("BEARER_TOKEN")
+# Bearer token for access to Twitter API
+bearer_token = os.getenv("BEARER_TOKEN")
 
 search_url = "https://api.twitter.com/2/tweets/counts/recent"
 

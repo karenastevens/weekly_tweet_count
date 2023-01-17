@@ -28,6 +28,8 @@ except mysql.connector.Error as err:
 # Bearer token for access to Twitter API
 bearer_token = os.getenv("BEARER_TOKEN")
 
+# Url to search tweets for the past 7 days
+
 search_url = "https://api.twitter.com/2/tweets/counts/recent"
 
 def weekly_update():

@@ -1,18 +1,18 @@
 <h1>Trending Plays: Weekly Tweet Count</h1>
 
-This script uses the Twitter API and MySQL to collect tweets for a given list of tickers and updates their counts in a MySQL database.
+This script uses the Twitter API and MySQL to collect tweets for a given list of tickers and updates their counts in a MySQL database. Currently displaying the top ten trending tickers each week on the <a href="www.trendingplays.com">Trending Plays</a> website. Repository can be found <a href="https://github.com/karenastevens/trendingplays_">here</a>.
 
 <h2>Requirements:</h2>
 <ul>
-    python3
-    mysql.connector
-    requests
-    os
-    json
-    time
-    logging
-    datetime
-    dotenv
+    <li>python3</li>
+    <li>mysql.connector</li>
+    <li>requests</li>
+    <li>os</li>
+    <li>json</li>
+    <li>time</li>
+    <li>logging</li>
+    <li>datetime</li>
+    <li>dotenv</li>
 </ul>
 
 <h2>Usage:</h2>

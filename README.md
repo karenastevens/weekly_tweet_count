@@ -1,18 +1,19 @@
-<h1>Trending Plays: Weekly Tweet Count<h1>
+<h1>Trending Plays: Weekly Tweet Count</h1>
 
 This script uses the Twitter API and MySQL to collect tweets for a given list of tickers and updates their counts in a MySQL database.
 
 <h2>Requirements:</h2>
-
-python3
-mysql.connector
-requests
-os
-json
-time
-logging
-datetime
-dotenv
+<ul>
+    python3
+    mysql.connector
+    requests
+    os
+    json
+    time
+    logging
+    datetime
+    dotenv
+</ul>
 
 <h2>Usage:</h2>
 
@@ -34,4 +35,4 @@ The script connects to a MySQL database and queries a table called nasdaq_ticker
 
 <h2>Note:</h2>
 
-Please check the Twitter API's TOS and make sure that the usage of the API does not violate any of the terms of service.
+Please check the <a href="https://developer.twitter.com/en/docs/twitter-api">Twitter API's TOS</a> and make sure that the usage of the API does not violate any of the terms of service.

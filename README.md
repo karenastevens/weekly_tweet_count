@@ -1,8 +1,8 @@
-Trending Plays: Weekly Tweet Count
+<h1>Trending Plays: Weekly Tweet Count<h1>
 
 This script uses the Twitter API and MySQL to collect tweets for a given list of tickers and updates their counts in a MySQL database.
 
-Requirements:
+<h2>Requirements:</h2>
 
 python3
 mysql.connector
@@ -14,7 +14,7 @@ logging
 datetime
 dotenv
 
-Usage:
+<h2>Usage:</h2>
 
 Clone this repository
 
@@ -25,12 +25,13 @@ Create a .env file in the root directory and add the following environment varia
     DB_NAME: the name of the database you want to connect to
     DB_HOST: the hostname or IP address of your MySQL server
     BEARER_TOKEN: your Twitter API bearer token
-    Run python3 weekly_update.py
 
-Functionality:
+Run python3 weekly_update.py
+
+<h2>Functionality:</h2>
 
 The script connects to a MySQL database and queries a table called nasdaq_tickers for a list of symbols. It then uses the Twitter API to search for tweets containing each ticker symbol and the language set to English. The number of tweets for each ticker is then updated in the nasdaq_tickers table. The script updates 300 tickers at a time, with a 15-minute break in between each batch to comply with Twitter API rate limits.
 
-Note:
+<h2>Note:</h2>
 
 Please check the Twitter API's TOS and make sure that the usage of the API does not violate any of the terms of service.

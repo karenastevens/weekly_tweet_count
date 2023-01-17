@@ -31,7 +31,7 @@ Run python3 weekly_update.py
 
 <h2>Functionality:</h2>
 
-The script connects to a MySQL database and queries a table called nasdaq_tickers for a list of symbols. It then uses the Twitter API to search for tweets containing each ticker symbol and the language set to English. The number of tweets for each ticker is then updated in the nasdaq_tickers table. The script updates 300 tickers at a time, with a 15-minute break in between each batch to comply with Twitter API rate limits.
+The script connects to a MySQL database and queries a table called `nasdaq_tickers` for a list of symbols. It then uses the Twitter API to search for tweets containing each ticker symbol and the language set to English. The number of tweets for each ticker is then updated in the `nasdaq_tickers` table. The script updates 300 tickers at a time, with a 15-minute break in between each batch to comply with Twitter API rate limits.
 
 <h2>Note:</h2>
 

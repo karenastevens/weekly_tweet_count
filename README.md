@@ -29,7 +29,7 @@ Create a .env file in the root directory and add the following environment varia
     DB_HOST: the hostname or IP address of your MySQL server
     BEARER_TOKEN: your Twitter API bearer token
 
-Run python3 weekly_update.py
+Run python3 weekly_tweet_count.py
 
 <h2>Functionality:</h2>
 
